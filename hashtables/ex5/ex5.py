@@ -10,7 +10,8 @@ def finder(files, queries):
     hs = {}
     result =[]
     for i in files:
-        z = i.split('/')[-1] 
+        z = i.split('/')[-1]
+        print(z)
         if z not in hs:
             hs[z] = [i]
         else:
