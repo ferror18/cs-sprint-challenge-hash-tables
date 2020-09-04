@@ -1,6 +1,6 @@
 def intersection(arrays):
     """
-    YOUR CODE HERE
+    YOUR CODE HEREaaa
     """
     # Your code here
     result = []
