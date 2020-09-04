@@ -7,7 +7,19 @@ def finder(files, queries):
     YOUR CODE HERE
     """
     # Your code here
-
+    hs = {}
+    result =[]
+    for i in files:
+        z = i.split('/')[-1] 
+        if z not in hs:
+            hs[z] = [i]
+        else:
+            hs[z] += i
+    # print(hs)
+    for i in queries:
+        if i in hs:
+            result += hs[i]
+    print(result)
     return result
 
 
