@@ -3,7 +3,22 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-
+    result = []
+    counter = {}
+    for i in arrays:
+        unique = {}
+        for x in i:
+            if x not in unique:
+                unique[x] = 1
+        for i in unique.items():
+            if i[0] in counter:
+                counter[i[0]] += 1
+            else:
+                counter[i[0]] = 1
+    # print('counter',counter)
+    for i in counter.items():
+        if i[1] == len(arrays):
+            result.append(i[0])
     return result
 
 
