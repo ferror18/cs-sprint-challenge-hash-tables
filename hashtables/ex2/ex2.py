@@ -12,9 +12,15 @@ def reconstruct_trip(tickets, length):
     # Your code here
     route = []
     hs = {}
-    for i in tickets:
-        route.append(i.destination)
+    # for i in tickets:
+    #     route.append(i.destination)
     for i in tickets:
         hs[i.source] = i.destination
-    
+    print(hs)
+    current = 'NONE'
+    route.append(hs[current])
+    while hs[current] != 'NONE':
+        current = hs[current]
+        route.append(hs[current])
+    # print(f'Mine{route}\nrequired{["LAX", "SFO", "BHM", "FLG", "XNA", "SAP","SLC", "PIT", "ORD", "NONE"]}')
     return route
